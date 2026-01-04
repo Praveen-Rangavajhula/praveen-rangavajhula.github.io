@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://praveen-rangavajhula.github.io/al-folio/sitemap.xml
+Sitemap: https://praveen-rangavajhula.github.io/sitemap.xml
