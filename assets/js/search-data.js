@@ -14,7 +14,7 @@ ninja.data = [{
           description: "For a complete and up-to-date record, please refer to the PDF version of my curriculum vitae.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/assets/pdf/Praveen_Rangavajhula_Resume.pdf";
           },
         },{id: "post-a-post-with-plotly-js",
         
