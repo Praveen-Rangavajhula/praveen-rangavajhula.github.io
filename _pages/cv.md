@@ -1,6 +1,6 @@
 ---
 layout: cv
-permalink: /cv/
+permalink: /assets/pdf/Praveen_Rangavajhula_Resume.pdf
 title: CV
 nav: true
 nav_order: 5
