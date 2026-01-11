@@ -39,7 +39,6 @@ reason about complex, structured data.
 
 More broadly, I’ve spent some time learning the basics of agentic AI and agent-based workflows to understand
 how machine learning models are used in systems that act over multiple steps rather than producing
-single-shot predictions. I’m interested in how machine learning research translates into deployed systems,
-particularly in settings where the work has real impact, and I’m open to engaging with agentic AI and
-agent-based workflows when they arise in such contexts.
+single-shot predictions. I’m interested in how machine learning research translates into deployed systems, 
+particularly in settings where the work has real impact, including agentic and workflow-driven approaches.
 
