@@ -1,0 +1,217 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{0.75in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.25in}
+
+\titleformat{\section}{\vspace{-4pt}\large\bfseries\scshape\raggedright}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{#2} \\
+      \textit{\small#3} & \textit{\small#4} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeItem}[2]{\item \small{\textbf{#1}{: #2 \vspace{-2pt}}}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\begin{document}
+
+% Heading
+\begin{center}
+    \textbf{\Huge Praveen Rangavajhula} \\[2pt]
+    \href{mailto:praveen.rangavajhula@uga.edu}{praveen.rangavajhula@uga.edu} $|$
+    \href{https://www.linkedin.com/in/praveen-rangavajhula/}{LinkedIn} $|$
+    \href{https://github.com/Praveen-Rangavajhula}{GitHub} $|$
+    Mobile: +1-706-765-9109
+\end{center}
+
+% Profile summary
+\section{Profile Summary}
+First-year PhD student in Computer Science at the University of Georgia with research interests in machine learning, predictive video modeling, longitudinal machine learning, optimization, learning dynamics, and interpretability. Experience includes V-JEPA-based latent future prediction, cognitive outcome modeling across longitudinal cohorts, automatic differentiation systems, privacy-preserving optimization, and federated learning.
+
+% Education
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+        {University of Georgia (UGA)}{Athens, GA}
+        {Ph.D. in Computer Science}{Jan 2026 - Present}
+    \resumeSubheading
+        {University of Georgia (UGA)}{Athens, GA}
+        {M.S. in Computer Science (GPA: 3.91)}{Aug 2023 - Dec 2025}
+    \resumeSubheading
+        {BITS Pilani}{Pilani, India}
+        {B.E. in Mechanical Engineering}{Aug 2019 - July 2023}
+\resumeSubHeadingListEnd
+
+% Research experience
+\section{Research Experience}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Graduate Research Assistant}{University of Georgia}
+        {Longitudinal Machine Learning for Cognitive Development using FFCWS and MIDUS}{Feb 2026 - Present}
+        \resumeItemListStart
+            \resumeItem{End-to-End ML Pipeline}
+                {Owned the complete machine learning pipeline for predicting cognitive outcomes from longitudinal Future of Families and Child Wellbeing Study (FFCWS) data, including data ingestion, cross-wave alignment, preprocessing, train-only imputation, model implementation, evaluation, analysis, and visualization for 1,480 children across ages 3, 5, and 9.}
+            \resumeItem{Model Development and Benchmarking}
+                {Implemented and benchmarked nine model families: standard and feature-engineered linear regression, support vector regression, Random Forest, XGBoost, histogram gradient boosting, an attention network, TabICLv2, and a custom Neural CDE. Evaluated the models using five repeated child-level 80/20 train-test splits and 344 to 796 time-valid predictors.}
+            \resumeItem{Empirical Findings}
+                {Found that expanding from theory-driven features to hundreds of predictors increased TabICLv2's average held-out $R^2$ from 0.307 to 0.324, indicating limited incremental predictive value from the expanded feature space.}
+            \resumeItem{Cross-Dataset Extension}
+                {Extending the end-to-end pipeline to the Midlife in the United States (MIDUS) longitudinal study to examine whether the findings generalize to an independent cohort.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Master's Researcher}{University of Georgia}
+        {Advised by Prof. John A. Miller}{Aug 2024 - Dec 2025}
+        \resumeItemListStart
+            \resumeItem{Custom Autograd Engine}
+                {Designed and implemented a custom autograd engine in Scala, enabling automatic computation graph construction and backpropagation.}
+            \resumeItem{Gradient Caching for Efficiency}
+                {Integrated gradient caching mechanisms to store intermediate values, reducing redundant recomputation and improving training efficiency.}
+            \resumeItem{Dynamic Computation Graph}
+                {Implemented a dynamic graph structure that supports complex tensor operations, allowing for efficient forward and backward passes in deep learning models.}
+            \resumeItem{Scalability and Modularity}
+                {Developed reusable tensor and optimization modules, making the engine extensible for future integration with larger ML frameworks, including potential applications in large-scale model training.}
+            \resumeItem{RNN and GRU Forecasting}
+                {Manually derived backpropagation through time (BPTT) equations for RNNs and GRUs, analyzed gradient flow behavior, and applied gradient clipping to improve training stability.}
+            \resumeItem{Implementation in Scala}
+                {Implemented RNNs and GRUs from scratch using the derived equations, achieving a SMAPE reduction from 60\% to 16\% on forecasting tasks.}
+            \resumeItem{Recurrent Architecture}
+                {Designed modular \texttt{RecurrentBase} and \texttt{RNNCell} components for large-scale forecasting tasks.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Volunteer Researcher}{University of Georgia}
+        {Advised by Profs. Fei Dou and Lakshmish Ramaswamy}{Jan 2025 - May 2025}
+        \resumeItemListStart
+            \resumeItem{Federated Learning for Carbon Footprint Tracking}
+                {Implemented \textbf{Federated Learning} using \textbf{Flower} and \textbf{PyTorch} to track \textbf{carbon emissions of deep learning models (MobileNetV3, ResNet20)} across distributed nodes.}
+            \resumeItem{Carbon-Aware Model Evaluation}
+                {Analyzed trade-offs between \textbf{model accuracy, energy efficiency, and environmental impact} in federated deep learning settings.}
+            \resumeItem{Edge AI Experimentation}
+                {Conducted experiments on \textbf{Jetson devices} to evaluate federated learning models (MobileNetV3, ResNet20) under low-power, decentralized settings.}
+        \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% Skills
+\section{Skills}
+\resumeSubHeadingListStart
+    \item \textbf{Programming Languages}{: Python, Scala, Java, C, SQL}
+    \item \textbf{Machine Learning Libraries}{: PyTorch, TensorFlow, Scikit-Learn, OpenCV}
+    \item \textbf{Data Science Tools}{: NumPy, Pandas, Matplotlib, Seaborn, Jupyter, scikit-image}
+    \item \textbf{ML Techniques \& Concepts}{: Supervised Learning, Deep Learning, Representation Learning, Video Representation Learning, Latent-Space Prediction, Optimization, Backpropagation, Federated Learning, Differential Privacy, Autograd Systems}
+\resumeSubHeadingListEnd
+
+% Projects
+\section{Projects}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Predictive Video Representation Learning with V-JEPA 2}{Research Project}
+        {Video Future Selection and Latent Prediction}{2026}
+        \resumeItemListStart
+            \resumeItem{V-JEPA Integration and Latent Prediction}
+                {Built a JEPA-style video future-selection system using a frozen V-JEPA 2 encoder to extract normalized clip embeddings and a compact PyTorch latent predictor trained with a composite MSE and cosine loss to forecast next-step representations.}
+            \resumeItem{End-to-End Data and Training Pipeline}
+                {Developed MovingMNIST and real-video ingestion pipelines, standardized clips for the video encoder, generated $K$ candidate futures per example, cached extracted embeddings, and implemented configurable AdamW training with validation-based best-state selection.}
+            \resumeItem{Scoring, Baselines, and Evaluation}
+                {Implemented frozen V-JEPA, learned latent-predictor, semantic, heuristic, and frozen-feature reranking methods; produced candidate rankings, confidence margins, and reproducible CSV/JSON benchmarks that revealed dataset-dependent trade-offs among scorers.}
+            \resumeItem{Grounded Interpretability and Demonstration}
+                {Created a deterministic explanation layer that converts structured scoring evidence into human-readable commentary, LLM-ready presenter prompts, and visualization-ready summaries for Jupyter demonstrations and research presentations.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Representation Learning Under Alternative Learning Rules}{University of Georgia}
+        {Independent Course Project in Representation Learning}{Jan 2026 - May 2026}
+        \resumeItemListStart
+            \resumeItem{Learning Rule Implementations}
+                {Independently implemented backpropagation, predictive coding, and Mono-Forward under matched multilayer perceptron architectures, conducting controlled experiments and validation-based model selection on MNIST and CIFAR-10.}
+            \resumeItem{Representation Analysis}
+                {Analyzed learned representations using layer-wise linear probes, t-SNE, and linear centered kernel alignment (CKA); Mono-Forward achieved 98.38\% test accuracy on MNIST, 54.84\% on CIFAR-10, and the strongest probe performance across both datasets.}
+            \resumeItem{Representation Similarity}
+                {Quantified learning-rule effects on representation geometry: backpropagation and Mono-Forward achieved a mean same-depth CKA of 0.749 on CIFAR-10, compared with 0.411 and 0.425 for pairings involving predictive coding.}
+            \resumeItem{Memory Profiling}
+                {Profiled peak CPU memory across matched MLPs with 2 to 10 hidden layers, observing lower measured peak memory for Mono-Forward as network depth increased.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Differentially Private Optimizer Research Project}{University of Georgia}
+        {Course Project in Privacy-Preserving Machine Learning (under Prof. Jaewoo Lee)}{Aug 2024 - Dec 2024}
+        \resumeItemListStart
+            \resumeItem{DP-Lion: Private Optimizer Design}
+                {Developed \textbf{DP-Lion}, a novel differentially private optimizer for deep learning, improving training stability and performance over DP-SGD and DP-Adam.}
+            \resumeItem{Benchmarking on CIFAR-10}
+                {Achieved \textbf{69\% accuracy} on ResNet20 with privacy guarantees, outperforming most existing DP optimizers in empirical evaluations.}
+            \resumeItem{Evaluation Against DeepMind Benchmarks}
+                {Integrated techniques from DeepMind's private optimization research and compared DP-Lion against their reported baselines.}
+            \resumeItem{Research Focus}
+                {Used Opacus to privatize DP-Lion and baseline optimizers (DP-SGD, DP-Adam, DP-RMSprop), conducting empirical comparisons as part of a graduate privacy-preserving ML course project.}
+            \resumeItem{Code}
+                {\href{https://github.com/CS8960-Privacy-Preserving-Data-Analysis/final-project}{GitHub Repository}}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Spotify Song Genre Classification}{University of Georgia}
+        {Course Project in Data Mining (under Prof. Fei Dou)}{Aug 2024 - Dec 2024}
+        \resumeItemListStart
+            \resumeItem{Data Processing \& Feature Engineering}
+                {Processed \textbf{114,000 song samples}, extracting insightful \textbf{audio features} (e.g., \textbf{danceability-valence correlation}).}
+            \resumeItem{Model Development}
+                {Trained and compared \textbf{Decision Trees, Random Forests, SVM, kNN, and Neural Networks}, achieving \textbf{85.6\% accuracy}.}
+            \resumeItem{Experimentation \& Metrics}
+                {Designed and evaluated experiments using \textbf{precision-recall, ROC-AUC}, and \textbf{confusion matrices} to optimize classification.}
+            \resumeItem{Code}
+                {\href{https://github.com/Praveen-Rangavajhula/spotify-genre-prediction}{GitHub Repository}}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Diabetes Progression Prediction}{Kaggle Project}
+        {Data-Driven Modeling \& Predictive Analytics}{Sept 2024}
+        \resumeItemListStart
+            \resumeItem{Exploratory Data Analysis (EDA)}
+                {Performed \textbf{data cleaning, feature engineering, and transformation (Box-Cox)} to improve regression model performance.}
+            \resumeItem{Predictive Modeling}
+                {Built and evaluated a \textbf{Linear Regression model from scratch}, benchmarking against \textbf{Scikit-Learn} implementations.}
+            \resumeItem{Model Evaluation \& Diagnostics}
+                {Used \textbf{residual analysis, Q-Q plots, VIF checks}, and \textbf{homoscedasticity tests} to diagnose and improve model performance.}
+            \resumeItem{Regularization \& Feature Selection}
+                {Analyzed the impact of \textbf{Lasso, Ridge, and Elastic Net} regularization techniques to mitigate multicollinearity.}
+            \resumeItem{Code}
+                {\href{https://github.com/Praveen-Rangavajhula/Machine-Learning-Basics}{GitHub Repository}}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Spatio-Temporal Audio Classification}{University of Georgia}
+        {Course Project in Machine Learning in IoT (under Prof. Fei Dou)}{Jan 2024 - May 2024}
+        \resumeItemListStart
+            \resumeItem{Model Adaptation}
+                {Adapted a published \textbf{ConvLSTM-based architecture} to classify underwater acoustic signals on the \textbf{VTUAD dataset}.}
+            \resumeItem{Learning Outcome}
+                {Gained initial hands-on exposure to deep learning pipelines, model reproduction, and working with spatio-temporal data in ML.}
+        \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% End
+\end{document}
